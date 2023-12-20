@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #111111;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+header {
+  display: flex;
+  height: 12vh;
+  justify-content: space-between;
+}
+
+h2 {
+  text-align: center;
+  font-size: 42px;
+}
+
+p {
+  padding: 15px;
+  font-size: 22px;
+}
+
+a {
+  text-decoration: none;
+  color: #ffd700;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+nav {
+  align-self: center;
+  display: flex;
+  font-size: 28px;
+  justify-content: space-around;
+  margin: 30px;
+  width: 30%;
+}
+
+.main-image {
+  height: 80vh;
+  width: 100%;
+}
+
+.about-container {
+  background-color: #ffd700;
+  display: flex;
+  height: 55vh;
+  justify-content: space-around;
+  margin: 0px 0px 50px 0px;
+  padding: 20px;
+  width: 100%;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-text-container {
+  color: black;
+  height: 45vh;
+  width: 40%;
+}
+
+.client-image {
+  height: 45vh;
+  width: 30%;
+  margin-top: 22px;
+}
+
+.services {
+  align-items: center;
+  border: 1px solid white;
+  background-size:cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+  height: 30vh;
+  margin: 15px;
+  opacity: 0.8;
+  width: 30%;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.services:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+.hair {
+  background-image: url(images/cabelo.jpeg);
+}
+
+.beard {
+  background-image: url(images/barba.jpeg);
+}
+
+.eyebrow {
+  background-image: url(images/sobrancelha.jpeg);
+}
+
+.services-container {
+  display:flex; 
+  justify-content: space-around;
+  margin: 70px 0px;
+  width: 100%;
+}
+
+.time-container {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 100px;
+  width: 80%;
+}
+
+.time {
+  align-items: center;
+  border: 3px solid #fff;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  height: 15vh;
+  justify-content: space-around;
+  width: 10%;
+}
+
+.booking {
+  border: 3px solid #fff;
+  background-color: #d19275;
+  color: #fff;
+  font-size: 28px;
+  margin-bottom: 50px;
+  opacity: 0.8;
+  padding: 30px;
+}
+
+.booking:hover {
+  opacity: 1;
+}

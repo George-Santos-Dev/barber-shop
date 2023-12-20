@@ -26,7 +26,7 @@ p {
 
 a {
   text-decoration: none;
-  color: #ffd700;
+  color: #faba53;
 }
 
 a:hover {
@@ -48,7 +48,8 @@ nav {
 }
 
 .about-container {
-  background-color: #ffd700;
+  /* background-color: #ffd700; */
+  background-color: #faba53;
   display: flex;
   height: 55vh;
   justify-content: space-around;
@@ -134,14 +135,33 @@ nav {
 
 .booking {
   border: 3px solid #fff;
-  background-color: #d19275;
+  background-color: #faba53;
   color: #fff;
   font-size: 28px;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
   opacity: 0.8;
   padding: 30px;
 }
 
 .booking:hover {
   opacity: 1;
+}
+
+.sale-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  font-size: 28px;
+  height: 50vh;
+}
+
+.plan {
+  border: 3px solid #fff;
+  background-color: #faba53;
+  color: #fff;
+  font-size: 28px;
+  opacity: 0.8;
+  padding: 30px;
 }

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donn Luan</title>
+  <link rel="stylesheet" type="text/css" href="index.css" media="screen" />
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      let links = document.querySelectorAll('nav a');
+  
+      links.forEach(function (link) {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+  
+          let targetId = this.getAttribute('href');
+          let targetElement = document.querySelector(targetId);
+  
+          if (targetElement) {
+            let offsetTop = targetElement.offsetTop;
+  
+            window.scrollTo({
+              top: offsetTop,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    });
+  </script>  
+</head>
+<body>
+  <header>
+    <h1 style="color: #fff; margin: 30px;">Logo</h1>
+
+    <nav>
+      <a href="#about">Sobre</a>
+      <a href="#services">Serviços</a>
+      <a href="#booking">Agendar</a>
+    </nav>
+  </header>
+  <main class="main-container">
+    <img class="main-image" src="./images/espaco.jpeg" />
+
+    <div id="about"  class="about-container">
+      <div class="about-text-container">
+        <h2>Sobre nós</h2>
+
+        <p>
+          Nós da barbearia Donn Luan acreditamos que a beleza está nos detalhes e que cada cliente é único nos cuidamos de cada fio de cabelo, transformando-o em uma extensão do seu estilo e autoconfiança, aqui  você é mais que um cliente você é um convidado especial
+        </p>
+
+        <p>
+          Estamos prontos pra te atender com profissionais capacitado e um ambiente muito agradável
+        </p>
+      </div>
+
+      <img class="client-image" src="./images/cliente.jpeg">
+    </div>
+
+    <div id="services" style="width: 100%;">
+      <h2>
+        Nossos serviços
+      </h2>
+      
+      <div class="services-container">
+        <div class="services hair">
+          Corte
+        </div>
+        <div class="services beard">
+          Barba
+        </div>
+        <div class="services eyebrow">
+          Sobrancelha
+        </div>
+      </div>
+    </div>
+
+    <div style="width: 100%; display: flex; flex-direction: column; align-items: center;">
+      <h2>
+        Horários
+      </h2>
+
+      <div class="time-container">
+        <div class="time">
+          <span>SEGUNDA</span>
+          <span>09:00 - 19:00</span>
+        </div>
+        <div class="time">
+          <span>TERÇA</span>
+          <span>09:00 - 19:00</span>
+        </div>
+        <div class="time">
+          <span>QUARTA</span>
+          <span>09:00 - 19:00</span>
+        </div>
+        <div class="time">
+          <span>QUINTA</span>
+          <span>09:00 - 19:00</span>
+        </div>
+        <div class="time">
+          <span>SEXTA</span>
+          <span>09:00 - 19:00</span>
+        </div>
+        <div class="time">
+          <span>SÁBADO</span>
+          <span>09:00 - 19:00</span>
+        </div>
+      </div>
+    </div>
+
+    <a id="booking" class="booking" href="https://wa.me/+5531987288025" target="_blank">Agendar Horário</a>
+  </main>
+</body>
+</html>

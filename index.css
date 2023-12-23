@@ -8,6 +8,7 @@ body {
   color: #fff;
   display: flex;
   flex-direction: column;
+  font-family: 'Indie Flower', cursive;
 }
 
 header {
@@ -302,5 +303,14 @@ nav {
   .rate {
     font-size: 20px;
     width: 100%;
+  }
+
+  .plan {
+    margin-top: 50px;
+  }
+
+  .sale-logo {
+    width: 140px;
+    height: 140px;
   }
 }

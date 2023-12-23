@@ -196,6 +196,7 @@ nav {
 .rate {
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   text-align: center;
   align-items: center;
   font-size: 2.3rem;
@@ -204,8 +205,8 @@ nav {
 }
 
 .rate-image {
-  height: 20rem;
-  width: 80%;
+  width: 150px;
+  height: 75px;
   margin-bottom: 30px;
 }
 
@@ -234,6 +235,7 @@ nav {
   nav {
     margin-top: 20px;
     width: 100%;
+    font-size: 1.1rem;
   }
 
   .main-image {
@@ -273,7 +275,7 @@ nav {
   }
 
   .sale-container {
-    font-size: 22px;
+    font-size: 19px;
   }
 
   .final-section {
@@ -309,8 +311,14 @@ nav {
     margin-top: 50px;
   }
 
-  .sale-logo {
+  .sale-logo, .logo {
     width: 140px;
     height: 140px;
+  }
+
+  .rate-image {
+    width: 100px;
+    height: 50px;
+    margin-bottom: 15px;
   }
 }

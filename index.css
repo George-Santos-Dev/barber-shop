@@ -6,12 +6,16 @@ body {
   margin: 0;
   padding: 0;
   color: #fff;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
   display: flex;
-  height: 12vh;
   justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
 h2 {
@@ -21,7 +25,7 @@ h2 {
 
 p {
   padding: 15px;
-  font-size: 22px;
+  font-size: 1.5rem;
 }
 
 a {
@@ -36,7 +40,7 @@ a:hover {
 nav {
   align-self: center;
   display: flex;
-  font-size: 28px;
+  font-size: 1.5rem;
   justify-content: space-around;
   margin: 30px;
   width: 30%;
@@ -48,10 +52,8 @@ nav {
 }
 
 .about-container {
-  /* background-color: #ffd700; */
   background-color: #faba53;
   display: flex;
-  height: 55vh;
   justify-content: space-around;
   margin: 0px 0px 50px 0px;
   padding: 20px;
@@ -65,8 +67,8 @@ nav {
 }
 
 .about-text-container {
+  box-sizing: border-box;
   color: black;
-  height: 45vh;
   width: 40%;
 }
 
@@ -78,10 +80,11 @@ nav {
 
 .services {
   align-items: center;
-  border: 1px solid white;
+  border: 2px solid white;
   background-size:cover;
   background-repeat: no-repeat;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   font-size: 50px;
   height: 30vh;
@@ -104,7 +107,7 @@ nav {
 }
 
 .eyebrow {
-  background-image: url(images/sobrancelha.jpeg);
+  background-image: url(images/download.jpeg);
 }
 
 .services-container {
@@ -155,6 +158,7 @@ nav {
   width: 100%;
   font-size: 28px;
   height: 50vh;
+  margin-bottom: 100px;
 }
 
 .plan {
@@ -164,4 +168,139 @@ nav {
   font-size: 28px;
   opacity: 0.8;
   padding: 30px;
+}
+
+.final-section {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 0px;
+  width: 100%;
+}
+
+.address-container {
+  display: flex;
+  width: 60%;
+  padding: 10px;
+}
+
+.address {
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30%;
+  height: 400px;
+}
+
+.rate {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  font-size: 2.3rem;
+  margin-right: 20px;
+  width: 30%;
+}
+
+.rate-image {
+  height: 20rem;
+  width: 80%;
+  margin-bottom: 30px;
+}
+
+.logo {
+  height: 10rem;
+  width: 10rem;
+}
+
+.service-title {
+  margin-top: 100px;
+}
+
+.mapa {
+  height: 400px;
+  width: 400px;
+  margin: 20px;
+  align-self: center;
+}
+
+@media only screen and (max-width: 900px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .main-image {
+    height: 50vh;
+  }
+
+  .about-container {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .about-text-container {
+    width: 100%;
+  }
+
+  .client-image {
+    width: 90%;
+    align-self: center;
+  }
+
+  .services-container {
+    flex-direction: column;
+  }
+
+  .services {
+    width: 90%;
+  }
+
+  .time-container {
+    flex-direction: column;
+  }
+
+  .time {
+    align-self: center;
+    width: 90%;
+    margin-bottom: 10px;
+  }
+
+  .sale-container {
+    font-size: 22px;
+  }
+
+  .final-section {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .address-container {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .mapa {
+    margin: 0;
+    width: 250px;
+    height: 250px;
+  }
+
+  .address {
+    width: 100%;
+    text-align: center;
+    justify-content: space-around;
+    height: 250px;
+  }
+
+  .rate {
+    font-size: 20px;
+    width: 100%;
+  }
 }

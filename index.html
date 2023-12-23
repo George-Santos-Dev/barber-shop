@@ -1,38 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Donn Luan</title>
   <link rel="stylesheet" type="text/css" href="index.css" media="screen" />
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      let links = document.querySelectorAll('nav a');
-  
-      links.forEach(function (link) {
-        link.addEventListener('click', function (e) {
-          e.preventDefault();
-  
-          let targetId = this.getAttribute('href');
-          let targetElement = document.querySelector(targetId);
-  
-          if (targetElement) {
-            let offsetTop = targetElement.offsetTop;
-  
-            window.scrollTo({
-              top: offsetTop,
-              behavior: 'smooth'
-            });
-          }
-        });
-      });
-    });
-  </script>  
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
+
 <body>
   <header>
-    <img src="./images/logo_final.png"/>
+    <img class="logo" src="./images/logo_final.png" />
 
     <nav>
       <a href="#about">Sobre</a>
@@ -41,44 +20,50 @@
       <a href="#plan">Planos</a>
     </nav>
   </header>
-  <main class="main-container">
-    <img class="main-image" src="./images/espaco.jpeg" />
 
-    <div id="about"  class="about-container">
+  <main class="main-container">
+    <img class="main-image" src="./images/espaco_filtro.jpeg" />
+
+    <section id="about" class="about-container">
       <div class="about-text-container">
         <h2>Sobre nós</h2>
 
         <p>
-          Nós da barbearia Donn Luan acreditamos que a beleza está nos detalhes e que cada cliente é único nos cuidamos de cada fio de cabelo, transformando-o em uma extensão do seu estilo e autoconfiança, aqui  você é mais que um cliente você é um convidado especial
+          Nós da barbearia Donn Luan acreditamos que a beleza está nos detalhes e que cada cliente é único nos cuidamos
+          de cada fio de cabelo, transformando-o em uma extensão do seu estilo e autoconfiança, aqui você é mais que um
+          cliente você é um convidado especial
         </p>
 
         <p>
-          Estamos prontos pra te atender com profissionais capacitado e um ambiente muito agradável
+          Estamos prontos pra te atender com profissionais capacitados e um ambiente muito agradável
         </p>
       </div>
 
       <img class="client-image" src="./images/cliente.jpeg">
-    </div>
+    </section>
 
-    <div id="services" style="width: 100%;">
-      <h2>
+    <section id="services" style="width: 100%;">
+      <h2 class="service-title">
         Nossos serviços
       </h2>
-      
+
       <div class="services-container">
         <div class="services hair">
-          Corte
+          <span>Corte</span>
+          <span>R$ 30,00</span>
         </div>
         <div class="services beard">
-          Barba
+          <span>Barba</span>
+          <span>R$ 30,00</span>
         </div>
         <div class="services eyebrow">
-          Sobrancelha
+          <span>Corte + Barba</span>
+          <span>R$ 50,00</span>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div style="width: 100%; display: flex; flex-direction: column; align-items: center;">
+    <section style="width: 100%; display: flex; flex-direction: column; align-items: center;">
       <h2>
         Horários
       </h2>
@@ -109,23 +94,50 @@
           <span>09:00 - 19:00</span>
         </div>
       </div>
-    </div>
+    </section>
 
     <a id="booking" class="booking" href="https://wa.me/+5531987288025" target="_blank">Agendar Horário</a>
 
-    <div class="sale-container">
+    <section class="sale-container">
       <span style="text-align: center;">
         Já pensou em cortar seu cabelo ou fazer a barba quantas vezes você quiser pagando um valor fixo?
       </span>
-      
-      <img style="border: 1px solid white; padding: 0;" src="./images/logo_final.png" />
-      
+
+      <img src="./images/logo_final.png" />
+
       <span>
-        Venha conhecer nosso planos
+        Venha conhecer nossos planos
       </span>
 
-      <a class="plan" id="plan">Confira aqui!</a>
-    </div>
+      <a href="https://app.galaxpay.com.br/landingpage5698468/principal" class="plan" id="plan">Confira aqui!</a>
+    </section>
+
+    <section class="final-section">
+      <div class="address-container">
+        <div id="mapa" class="mapa"></div>
+        <div class="address">
+          <span style="font-size: 2rem;">Onde estamos</span>
+          <div>
+            <span>Endereço: Av. Dr. Cristiano Guimarães,</span>
+            <span>2507 - Planalto, Belo Horizonte - MG, 31720-300</span>
+            <br>
+            <br>
+            <span>Telefone: (31) 98728-8025</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="rate">
+        <img class="rate-image" src="./images/customer.jpeg">
+        <span>Sua opinião é importe!</span>
+        <a href="https://g.page/r/CQfLIeFiW0L7EBM/review">Avalie nosso serviço</a>
+      </div>
+    </section>
+
+    <footer style="margin-top: 30px;"></footer>
   </main>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="index.js"></script>
 </body>
+
 </html>

@@ -9,23 +9,99 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Montserrat:wght@800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Montserrat:wght@800&display=swap"
+    rel="stylesheet">
 
   <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '6986401754777856');
     fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=6986401754777856&ev=PageView&noscript=1"
-    /></noscript>
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=6986401754777856&ev=PageView&noscript=1" /></noscript>
+
+  <script>
+    fetch('https://ipinfo.io/json')
+      .then(response => response.json())
+      .then(data => {
+        console.log('Informações sobre o IP:', data);
+      })
+      .catch(error => {
+        console.error('Erro ao obter informações sobre o IP:', error);
+      });
+
+    // const apiFb = async () => {
+    //   let current_timestamp = Math.floor(new Date() / 1000);
+    //   let client = navigator.userAgent;
+
+    //   const response = await fetch('https://graph.facebook.com/v18.0/6986401754777856/events?access_token=EAAC6QoGp1ZAEBOZCmOpkK2e2bggZBQARe4JcLZCBl29euZCh6bVzjqEGDBPu8vTh5xBmpTVmtl2vuurKUln00W066Pa9ajqN0pe4U4QvyYZB2ZCan8ID5U8lW9yeUnqXcGBOJlfyarTeSuY9zfWdwSB5kZChAnOW6MJfmfyzr64EZCReILeUAtA7434s04ajm2YES5wZDZD', {
+    //     method: 'POST',
+    //     headers: {
+    //       'Content-Type': 'application/json'
+    //     },
+    //     body: {
+    //       "data": [
+    //         {
+    //           "event_name": "PageView",
+    //           "event_time": current_timestamp,
+    //           "event_id": "",
+    //           "event_source_url": "",
+    //           "action_source": "",
+    //           "user_data": {
+    //             "client_ip_address": "192.19.9.9",
+    //             "client_user_agent": client,
+    //             "em": [
+    //               "309a0a5c3e211326ae75ca18196d301a9bdbd1a882a4d2569511033da23f0abd"
+    //             ],
+    //             "ph": [
+    //               "254aa248acb47dd654ca3ea53f48c2c26d641d23d7e2e93a1ec56258df7674c4",
+    //               "6f4fcb9deaeadc8f9746ae76d97ce1239e98b404efe5da3ee0b7149740f89ad6"
+    //             ],
+    //             "fbc": "fb.1.1554763741205.AbCdEfGhIjKlMnOpQrStUvWxYz1234567890",
+    //             "fbp": "fb.1.1558571054389.1098115397"
+    //           },
+    //           "custom_data": {
+    //             "value": 100.2,
+    //             "currency": "USD",
+    //             "content_ids": [
+    //               "product.id.123"
+    //             ],
+    //             "content_type": "product"
+    //           },
+    //           "opt_out": false
+    //         },
+    //         {
+    //           "event_name": "Purchase",
+    //           "event_time": 1633552688,
+    //           "user_data": {
+    //             "client_ip_address": "192.88.9.9",
+    //             "client_user_agent": "test ua2"
+    //           },
+    //           "custom_data": {
+    //             "value": 50.5,
+    //             "currency": "USD"
+    //           },
+    //           "opt_out": false
+    //         }
+    //       ]
+    //     }
+    //   });
+
+    //   console.log(response);
+    // }
+
+    // apiFb();
+  </script>
 </head>
 
 <body>
@@ -115,7 +191,8 @@
       </div>
     </section>
 
-    <a id="booking" class="booking" href="https://wa.me/+5531987288025" target="_blank">Agende seu horário <img src="./images/whatsapp.png" class="whatsapp-image"></a>
+    <a id="booking" class="booking" href="https://wa.me/+5531987288025" target="_blank">Agende seu horário <img
+        src="./images/whatsapp.png" class="whatsapp-image"></a>
 
     <section class="sale-container">
       <span style="text-align: center;">

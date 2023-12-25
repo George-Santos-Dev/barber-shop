@@ -36,7 +36,20 @@ document.addEventListener('DOMContentLoaded', function () {
   })
 });
 
-// Substitua os valores abaixo com suas informações reais
+let user_data = { ip: '' };
+let current_timestamp = Math.floor(new Date() / 1000);
+let client = navigator.userAgent;
+
+
+fetch('https://ipinfo.io/json')
+  .then(response => response.json())
+  .then(data => {
+    user_data = data;
+  })
+  .catch(error => {
+    console.log(error)
+  });
+
 const pixelId = '6986401754777856';
 const accessToken = 'EAAC6QoGp1ZAEBOZCmOpkK2e2bggZBQARe4JcLZCBl29euZCh6bVzjqEGDBPu8vTh5xBmpTVmtl2vuurKUln00W066Pa9ajqN0pe4U4QvyYZB2ZCan8ID5U8lW9yeUnqXcGBOJlfyarTeSuY9zfWdwSB5kZChAnOW6MJfmfyzr64EZCReILeUAtA7434s04ajm2YES5wZDZD';
 const apiUrl = `https://graph.facebook.com/v18.0/${pixelId}/events`;
@@ -44,31 +57,19 @@ const apiUrl = `https://graph.facebook.com/v18.0/${pixelId}/events`;
 // Dados do evento
 const eventData = [
   {
-    "event_name": "Purchase",
-    "event_time": 1703512289,
+    "event_name": "PageView",
+    "event_time": current_timestamp,
     "user_data": {
-      "em": ["309a0a5c3e211326ae75ca18196d301a9bdbd1a882a4d2569511033da23f0abd"],
+      "em": [""],
       "ph": [
-        "254aa248acb47dd654ca3ea53f48c2c26d641d23d7e2e93a1ec56258df7674c4",
-        "6f4fcb9deaeadc8f9746ae76d97ce1239e98b404efe5da3ee0b7149740f89ad6"
+        ""
       ],
-      "client_ip_address": "123.123.123.123",
-      "client_user_agent": "$CLIENT_USER_AGENT",
+      "client_ip_address": user_data?.ip,
+      "client_user_agent": client,
       "fbc": "fb.1.1554763741205.AbCdEfGhIjKlMnOpQrStUvWxYz1234567890",
       "fbp": "fb.1.1558571054389.1098115397"
     },
-    "custom_data": {
-      "currency": "usd",
-      "value": 123.45,
-      "contents": [
-        {
-          "id": "product123",
-          "quantity": 1,
-          "delivery_category": "home_delivery"
-        }
-      ]
-    },
-    "event_source_url": "http://jaspers-market.com/product/123",
+    "event_source_url": "",
     "action_source": "website"
   }
 ];
@@ -88,5 +89,5 @@ const requestOptions = {
 // Realiza a requisição usando fetch
 fetch(apiUrl, requestOptions)
   .then(response => response.json())
-  .then(data => console.log('Resposta da API:', data))
-  .catch(error => console.error('Erro na requisição:', error));
+  .then(data => console.log('Resposta da API:', 'ok'))
+  .catch(error => console.error('Erro na requisição:', ''));
